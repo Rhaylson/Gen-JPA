@@ -1,0 +1,62 @@
+<elementos>
+	<classe>
+		<id>ContaCorrente</id>
+		<nome>ContaCorrente</nome>
+		<heranca>
+			<general>Conta</general>
+			<specific>ContaCorrente</specific>
+		</heranca>
+		<atributo>
+			<visibilidade>private</visibilidade>
+			<tipo>double</tipo>
+			<nome>limite</nome>
+		</atributo>
+	</classe>
+	<classe>
+		<id>Conta</id>
+		<nome>Conta</nome>
+		<atributo>
+			<visibilidade>private</visibilidade>
+			<tipo>double</tipo>
+			<nome>saldo</nome>
+		</atributo>
+	</classe>
+	<classe>
+		<id>Pessoa</id>
+		<nome>Pessoa</nome>
+		<atributo>
+			<visibilidade>private</visibilidade>
+			<tipo>Date</tipo>
+			<nome>nascimento</nome>
+		</atributo>
+		<atributo>
+			<visibilidade>private</visibilidade>
+			<tipo>char</tipo>
+			<nome>sexo</nome>
+		</atributo>
+		<atributo>
+			<visibilidade>private</visibilidade>
+			<tipo>String</tipo>
+			<nome>nome</nome>
+		</atributo>
+	</classe>
+<associacao>
+<nome>pessoa_conta_1</nome>
+<membroA>
+	<classe>Pessoa</classe>
+	<agregacao>none</agregacao>
+	<minimo>1</minimo>
+	<maximo>1</maximo>
+	<navegavel>false</navegavel>
+</membroA>
+<membroB>
+	<classe>Conta</classe>
+	<agregacao>none</agregacao>
+	<minimo>1</minimo>
+	<maximo>-1</maximo>
+	<navegavel>true</navegavel>
+</membroB>
+</associacao>
+
+</elementos>
+

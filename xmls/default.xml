@@ -1,0 +1,67 @@
+<defaults>
+	<default>
+		<tipo>Boolean</tipo>
+		<valor>false</valor>
+	</default>
+	
+	<default>
+		<tipo>Byte</tipo>
+		<valor>0</valor>
+	</default>
+	
+	<default>
+		<tipo>Character</tipo>
+		<valor>''</valor>
+	</default>
+	
+	<default>
+		<tipo>Double</tipo>
+		<valor>0.0</valor>
+	</default>
+	
+	<default>
+		<tipo>Number</tipo>
+		<valor>0.0</valor>
+	</default>
+	
+	<default>
+		<tipo>Integer</tipo>
+		<valor>0</valor>
+	</default>
+	
+	<default>
+		<tipo>BigInteger</tipo>
+		<valor>0</valor>
+	</default>
+	
+	<default>
+		<tipo>BigDecimal</tipo>
+		<valor>0</valor>
+	</default>
+	
+	<default>
+		<tipo>Float</tipo>
+		<valor>0.0f</valor>
+	</default>
+	
+	<default>
+		<tipo>Short</tipo>
+		<valor>0</valor>
+	</default>
+	
+	<default>
+		<tipo>Long</tipo>
+		<valor>0L</valor>
+	</default>
+	
+	<default>
+		<tipo>String</tipo>
+		<valor>""</valor>
+	</default>
+	
+	<default>
+		<tipo>Calendar</tipo>
+		<valor>Calendar.getInstance()</valor>
+	</default>
+	
+</defaults>

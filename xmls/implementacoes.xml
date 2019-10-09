@@ -1,0 +1,24 @@
+<implementacoes>
+
+	<implementacao>
+		<classe>Map</classe>
+		<pacote>java.util</pacote>
+		<concreta>HashMap</concreta>
+	</implementacao>
+	
+	<implementacao>
+		<classe>List</classe>
+		<pacote>java.util</pacote>
+		<concreta>ArrayList</concreta>
+		<concreta>Vector</concreta>
+		<concreta>LinkedList</concreta>
+	</implementacao>
+	
+	<implementacao>
+		<classe>Set</classe>
+		<pacote>java.util</pacote>
+		<concreta>HashSet</concreta>
+		<concreta>TreeSet</concreta>
+	</implementacao>
+	
+</implementacoes>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<erros>
+	<Erro>
+		<elemento>Conta</elemento>
+		<tipo>Property</tipo>
+		<descricaoErro>id : atributo com nome incompatível com a
+				linguagem Java ou com o nome id.</descricaoErro>
+	</Erro>
+	
+	<Erro>
+		<elemento>Pessoa</elemento>
+		<tipo>Property</tipo>
+		<descricaoErro>id : atributo com nome incompatível com a 
+				linguagem Java ou com o nome id.</descricaoErro>
+	</Erro>
+</erros>
+

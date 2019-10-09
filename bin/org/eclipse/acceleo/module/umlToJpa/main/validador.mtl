@@ -1,0 +1,50 @@
+[comment encoding = UTF-8 /]
+[module validador('http://www.eclipse.org/uml2/4.0.0/UML')]
+
+
+[template public validador(model : Model)]
+
+[file (self.name+'.txt', false)]
+
+	[for(model.packagedElement->filter(Class))]
+			[if(herancaCiclica(self))]
+			Herança Cíclica;
+			[/if]
+	[/for]
+
+	[for(model.packagedElement->filter(Association))]
+			[if (self.memberEnd->size()=0)]
+			Associação não navegável;
+			[/if]
+	[/for]
+	
+	[for (model.packagedElement->filter(Association))]
+			[if (self.memberEnd->size()>2)]
+			Associação não binaria;
+			[/if]
+	[/for]
+
+[/file]
+[/template]
+
+[query public herancaCiclica(c:Class):Boolean = self->asSet()->closure(superClass)->includes(self)/]
+
+[query public herancaProfunda(c:Class):Boolean = if (self->asSet()->closure(superClass)->size()>4) then true else false endif/]
+
+
+[query public addClasse(c:Class) : Boolean = invoke
+('org.eclipse.acceleo.module.umlToJpa.util.GerenciadorDeElementosDoModelo','adicionarClasse(org.eclipse.uml2.uml.Class)',Sequence{self})/]
+
+[query public addAssociacao(a:Association) : Boolean = invoke
+('org.eclipse.acceleo.module.umlToJpa.util.RecebeElementosModelo','addAssociacao(org.eclipse.uml2.uml.Association)',Sequence{self})/]
+
+[query public addInterface(i:Interface):Boolean =invoke
+('org.eclipse.acceleo.module.umlToJpa.util.RecebeElementosModelo','addInterface(org.eclipse.uml2.uml.Interface)',Sequence{self})/]
+
+[query public addGeneralizacao(g:Generalization):Boolean =invoke
+('org.eclipse.acceleo.module.umlToJpa.util.RecebeElementosModelo','addGeneralizacao(org.eclipse.uml2.uml.Generalization)',Sequence{self})/]
+
+
+
+
+

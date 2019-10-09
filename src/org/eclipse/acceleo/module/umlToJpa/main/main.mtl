@@ -1,0 +1,99 @@
+[comment encoding = UTF-8 /]
+[module main('http://www.eclipse.org/uml2/4.0.0/UML')]
+
+
+[template public main(model : Model)]
+	[comment @main /]
+[file (self.name+'.xml', false)]
+<elementos>
+		[for(c:Class | model.packagedElement->filter(Class))]
+	<classe>
+		<id>[c.name/]</id>
+		<nome>[c.name.normalizarClasse()/]</nome>
+		[for(g:Generalization | c.generalization)]
+		<heranca>
+			<general>[g.general.name/]</general>
+			<specific>[g.specific.name/]</specific>
+		</heranca>
+		[/for]
+		[for(p:Property | c.ownedAttribute)]
+			[if(p.association=null)]
+		<atributo>
+			<visibilidade>[p.visibility.toString()/]</visibilidade>
+			<tipo>[p.type.name/]</tipo>
+			<nome>[p.name.normalizarAtributo()/]</nome>
+			[if(p.default<>null)]
+			<default>[p.default/]</default>
+			[/if]
+		</atributo>
+			[/if]
+		[/for]
+		[for(o:Operation | c.ownedOperation)]
+		<metodo>
+			<nome>[o.name.normalizarMetodo()/]</nome>
+			<visibilidade>[o.visibility.toString()/]</visibilidade>
+			<retorno>[o.typeReturn()/]</retorno>
+			[for (p:Parameter | o.ownedParameter)]
+			[if (p.direction.toString()<>'return')]
+			<parametro>
+				<tipo>[p.type.toString()/]</tipo>
+				<nome>[p.name.normalizarAtributo()/]</nome>
+			</parametro>
+			[/if]
+			[/for]
+		</metodo>
+		[/for]
+	</classe>
+	[/for]
+	[for(a:Association | model.packagedElement->filter(Association))]
+<associacao>
+<nome>[a.name/]</nome>
+[a.associationEnd()/]
+</associacao>
+
+	[/for]
+</elementos>
+
+[/file]
+[/template]
+
+[query private typeReturn(o:Operation):
+String = if o.returnResult()->isEmpty() then
+'void'
+else
+o.type.name.toString()
+endif
+/]
+
+[query private associationEnd(a:Association):
+String = a.memberEnd->iterate(p:Property; result:String='' | 
+if result.size() = 0 then
+result.concat('<membroA>'+
+			  '\n\t<classe>'+p.type.name+'</classe>'+
+			  '\n\t<agregacao>'+p.aggregation+'</agregacao>'+
+			  '\n\t<minimo>'+p.lower+'</minimo>'+
+			  '\n\t<maximo>'+p.upper+'</maximo>'+
+			 if p.isNavigable() = true then '\n\t<navegavel>true</navegavel>' else '\n\t<navegavel>false</navegavel>' endif
+			 +'\n</membroA>\n'
+)
+else
+result.concat('<membroB>'+
+			  '\n\t<classe>'+p.type.name+'</classe>'+
+			  '\n\t<agregacao>'+p.aggregation+'</agregacao>'+
+			  '\n\t<minimo>'+p.lower+'</minimo>'+
+			  '\n\t<maximo>'+p.upper+'</maximo>'+
+			 if p.isNavigable() = true then '\n\t<navegavel>'+true+'</navegavel>' else '\n\t<navegavel>false</navegavel>' endif
+			 +'\n</membroB>')
+endif
+)
+/]
+
+[query public normalizarClasse(s:String) : String = invoke
+('org.eclipse.acceleo.module.umlToJpa.validacao.NormalizadorDeNomes','normalizarNomeClassificador(java.lang.String)',Sequence{self})/]
+
+[query public normalizarAtributo(s:String) : String = invoke
+('org.eclipse.acceleo.module.umlToJpa.validacao.NormalizadorDeNomes','normalizarNomeAtributo(java.lang.String)',Sequence{self})/]
+
+[query public normalizarMetodo(s:String) : String = invoke
+('org.eclipse.acceleo.module.umlToJpa.validacao.NormalizadorDeNomes','normalizarNomeMetodo(java.lang.String)',Sequence{self})/]
+

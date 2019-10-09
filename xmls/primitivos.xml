@@ -1,0 +1,254 @@
+<tipos>
+	<tipo>
+		<nome>boolean</nome>
+		<classe>Boolean</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>byte</nome>
+		<classe>Byte</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>char</nome>
+		<classe>Character</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>double</nome>
+		<classe>Double</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>float</nome>
+		<classe>Float</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>int</nome>
+		<classe>Integer</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>long</nome>
+		<classe>Long</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>short</nome>
+		<classe>Short</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EBigDecimal</nome>
+		<classe>BigDecimal</classe>
+		<pacote>java.math</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EBigInteger</nome>
+		<classe>BigInteger</classe>
+		<pacote>java.math</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EBoolean</nome>
+		<classe>Boolean</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EBooleanObject</nome>
+		<classe>Boolean</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EByteObject</nome>
+		<classe>Byte</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>ECharacterObject</nome>
+		<classe>Character</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EIntegerObject</nome>
+		<classe>Integer</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EByte</nome>
+		<classe>Byte</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EChar</nome>
+		<classe>Character</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EDouble</nome>
+		<classe>Double</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EEnumerator</nome>
+		<classe>Enum</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EEList</nome>
+		<classe>List</classe>
+		<pacote>java.util</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EDate</nome>
+		<classe>Date</classe>
+		<pacote>java.util</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EFloat</nome>
+		<classe>Float</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EInt</nome>
+		<classe>Integer</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>ELong</nome>
+		<classe>Long</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EMap</nome>
+		<classe>Map</classe>
+		<pacote>java.util</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>EShort</nome>
+		<classe>Short</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>UnlimitedNatural</nome>
+		<classe>String</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>Decimal</nome>
+		<classe>BigDecimal</classe>
+		<pacote>java.math</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>DateTime</nome>
+		<classe>Calendar</classe>
+		<pacote>java.util</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>Time</nome>
+		<classe>Calendar</classe>
+		<pacote>java.util</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>BooleanObject</nome>
+		<classe>Boolean</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>ByteObject</nome>
+		<classe>Byte</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>DoubleObject</nome>
+		<classe>Double</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>FloatObject</nome>
+		<classe>Float</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>IntObject</nome>
+		<classe>Integer</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>LongObject</nome>
+		<classe>Long</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>ShortObject</nome>
+		<classe>Short</classe>
+		<pacote>java.lang</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>GDay</nome>
+		<classe>Calendar</classe>
+		<pacote>java.util</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>GMonth</nome>
+		<classe>Calendar</classe>
+		<pacote>java.util</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>GMonthDay</nome>
+		<classe>Calendar</classe>
+		<pacote>java.util</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>GYear</nome>
+		<classe>Calendar</classe>
+		<pacote>java.util</pacote>
+	</tipo>
+	
+	<tipo>
+		<nome>GYearMonth</nome>
+		<classe>Calendar</classe>
+		<pacote>java.util</pacote>
+	</tipo>
+	
+</tipos>
